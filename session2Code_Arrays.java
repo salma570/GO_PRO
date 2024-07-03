@@ -1,7 +1,5 @@
-
 import java.io.*;
 import java.util.*;
-
 public class Main {
 	public static void main(String[] args) throws Exception {
 		// (2) for each loop
@@ -49,6 +47,7 @@ public class Main {
 		// we could use the predefined method Arrays.sort() to sort a given
 		// array
 		// Note: It sorts in a non-decreasing order
+
 		int[] a = new int[5];
 		Arrays.sort(a); // O(n^2) at worst case
 
@@ -86,27 +85,21 @@ public class Main {
 		Arrays.sort(arr, (a, b) -> (a.x + a.y) - (b.x + b.y));
 	}
 
-	static class Pair implements Comparable<Pair> {
+	static class Pair  { //implements Comparable<Pair>
 		int x;
 		int y;
-
 		public Pair(int x, int y) {
 			this.x = x;
 			this.y = y;
 		}
-
 		public String toString() {
 			return "{" + this.x + ", " + this.y + "}";
 		}
-
-		@Override
+		//Override
 		public int compareTo(Pair other) {
 			// TODO Auto-generated method stub
-
 			// sorts on x then y (in a non-decreasing order)
 			return (this.x == other.x) ? this.y - other.y : this.x - other.x;
 		}
 	}
-
-	
 }
