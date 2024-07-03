@@ -1,4 +1,6 @@
-public class Repeat{    static class Scanner {
+public class Repeat{    
+        
+        static class Scanner {
 
         StringTokenizer st;
         BufferedReader br;
