@@ -21,6 +21,26 @@ public class prefixSum {
 		prefixSum1();         //O(n+q)
 		
 	}
+	
+	/*
+	public static void prefixSum() throws Exception{
+		int n = sc.nextInt();
+		int q = sc.nextInt();
+		int[] arr = new int[n];
+		for(int i=0 ; i<n ; i++) {
+			arr[i] = sc.nextInt();
+		}
+		int[] pref = new int[n] ;
+		pref[0] = arr[0] ;
+		for(int i=1 ; i<n ; i++) {
+			pref[i] = arr[i] + pref[i-1];
+		}
+		while(q-- > 0) {
+			int l = sc.nextInt()-1;
+			int r = sc.nextInt()-1;
+			pw.println(pref[r] - ((l==0)?0:pref[l-1])) ;
+		}
+	} */
 	public static void prefixSum1() throws Exception{
 		//prefixSum is the file name yea
 		prefixSum.sc = new prefixSum.Scanner(System.in);
