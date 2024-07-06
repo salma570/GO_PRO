@@ -1,7 +1,7 @@
 public class Stack{
   public static void main (String[] args){
     
-    
+    //https://www.geeksforgeeks.org/stack-class-in-java/
     Stack<Integer> st = new Stack<>(); 
     // can add to size in bracket (2) eg.
     //write all types complete 
