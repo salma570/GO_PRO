@@ -1,4 +1,4 @@
-public class TreeSet{
+public class TreeSetandMap{
   public static void main (String[] args){
     TreeSet<> ts = new TreeSet<>(); // each element is repeated once
 
@@ -27,6 +27,64 @@ public class TreeSet{
     for(Integer i : tset){
       System.out.println(tset.get(i));
     }
+
+
+
+
+
+
+
+
+//like hashmap but it just ordered 
+// complexity O(log(n))
+
+    
+    TreeMap<Integer , Integer> tmo = new TreeMap<>();
+
+    tmo.put(10,10);
+    tmo.put(12,-1);
+    tmo.put(9, 10);
+    //values could be overritten 
+int mapbal =0;
+
+    // to avoid exception not found key use:
+    if(tmo.containsKey(13))
+      mapbal = tmo.get(13);
+
+tmo.containsvalue(13);
+    tmo.remove(10);
+    int ceil = tmo.ceilingKey(-1); //get smallest value
+    int floor = tmo.floorKey(-1); //get smallest value
+
+
+
+
+    //looping on a tree set
+
+      for(Integer i : treeMap.keySet()){
+        System.out.println(tmp.key(), tmp.value());
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
   }
 }
