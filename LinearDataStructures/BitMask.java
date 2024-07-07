@@ -9,17 +9,15 @@ public class BitMask{
       ba[c] = true;
     }
     System.out.println(Arrays.toString(ba));
-
-    //is the same as 
+//is the same as 
     int n = sc.nextInt();
     while (n-->0){
       ba[sc.nextInt()] = true;
     }
     System.out.println(Arrays.toString(ba));
 
-    //operations to represent integer as a boolean array
-    // 1 represent true and 0 represents false
-
+//operations to represent integer as a boolean array
+// 1 represent true and 0 represents false
     int mask = 11; //use as an array saves up to 32 bit
 
     for(int i =0; i<32 ; i++){
@@ -39,16 +37,29 @@ public class BitMask{
     // 000001010
     // 000001000 > 1<<3
     // 000001000 when anding both numbers
-
     // 1<<i depend on position of the 1 according to the array
 
 //https://www.geeksforgeeks.org/what-is-bitmasking/
-    
+    //turn to zero 
+    int mask1 = 46; 
+    mask1 = mask1<<1; //multiply by powers of 2
+    mask1 = mask1>>1; //divide by powers of 2
 
-
-    
-
-    
-    
+    int ns =0;
+    // turn on
+    ns = 1<<5;
+    // turn off
+    ns &= (1<<6);
+//check if 5th bit is on or off
+    System.out.println(s&(1<<5));
+    boolean b = (s& (1<<5)) ==0; // if true yb2a offf
+// XOR for toggling bits
+    // 1^0 = 1       0^1 = 0
+    // 0^0 = 0       1^1=0
+// first least significant one > the first one mn el ymin
+    //v 10001001 t =1
+    // 010100100 t = 4 > 100
+    //- s >> two's compliment of s
+    int t = (s&(-s)); 
   }
 }
