@@ -1,11 +1,13 @@
-// https://www.geeksforgeeks.org/hashset-in-java/ 
-//https://www.geeksforgeeks.org/internal-working-of-hashmap-java/
-//https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/
-
-// hashset is an instanc ein the hashhmapp
 
 public class HashMap{
   public static void main(String[] args){
+    // https://www.geeksforgeeks.org/hashset-in-java/ 
+    //https://www.geeksforgeeks.org/internal-working-of-hashmap-java/
+    //https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/
+    
+    // hashset is an instanc ein the hashhmapp
+
+    
     HashMap<String, Integer> hmap = new HashMap<>();
 
     // pair 2 elements og ammy types could e int int // int - str // str str keda
