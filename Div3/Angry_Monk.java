@@ -1,3 +1,5 @@
+//https://codeforces.com/contest/1992/problem/B
+
 import java.io.*;
 import java.util.*;
 public class Angry_Monk {
