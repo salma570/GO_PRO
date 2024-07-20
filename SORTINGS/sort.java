@@ -1,9 +1,111 @@
+import java.util.*;
 
 public class sort{
-//o(nlog(n))         max n: n^5/n^6
+	//SORINGS WORK IN ACENDING ORDER
+	
+	
+//o(n log(n))         max n: n^5/n^6
 //o(n)                max n: n^7/n^6
 public static void main (String[] args){
- 
+		 int[] a = new int[] {38,27,43,3,9,82,10};
+		 TreeSet<Integer> set = new TreeSet<>();
+		 
+		 for (int i = 0; i < a.length; i++) {
+			set.add(a[i]); // sort array in n log(n)
+		}
+		 for (int i = 0; i < a.length; i++) {
+			a[i] = set.pollFirst(); //O(q)
+		}
+		 //total complexity: O(n logn)
+		 
+		 Arrays.sort(a); //quicck sort>> WORST CASE N^2
+		 
+		 //sorting techniques
+		 
+		 // arraylist and sort 
+		 ArrayList<Integer> list = new ArrayList<Integer>();
+		 Collections.sort(list); // tim sort > mergesort like algorithm
+		 
+		 // shuffle and sort 
+		 
+		 // sort obects objects
+		 Monster [] arr = new Monster[3]; // use tim sort or merge sort
+		 arr[0] = new Monster(5, 0);
+		 arr[1] = new Monster(4, 0);
+		 arr[2] = new Monster(3, 0);
+		 
+		 Arrays.sort(arr); // tim sort
+		 System.out.println(Arrays.toString(arr)); // will give indexes 
+		 System.out.println(arr[0].height +" " +arr[1].height +" "+ arr[2].height);
+		 
+		 
+		 
+		 // Integer is an int bs mi4 primitiive datat type
+		//Integer aa= new Integer(1);
+		
+		 int [] arr2 = new int [5];
+		Integer [] arr3 = new Integer [3];
+		
+		for (int i = 0; i < arr3.length; i++) {
+			arr3[i] = arr2[i];
+			// gets sorted with merge sort 
+		}
+		
+}
+
+public static class Monster implements Comparable<Monster>{
+	int height, width;
+	Monster(int h, int w){
+		height=h;
+		width = w;
+	}
+	public int compareTo(Monster m) {
+		
+		/* option 1
+		// < 0, this, <m
+		// 0, this = m
+		// >0, this >m
+		  
+		  
+		// >> insatnce methiodn.compareTo(m)
+		
+		
+		
+		if(this.height< m.height) {
+			return -1;
+		}else if (this.height< m.height) {
+			return 0;
+		}else {
+			return 1;
+		}
+		*/
+		
+		//option 2
+		/*
+		return this.height-m.height;
+		*/
+		
+		// MODEFICATION 
+		
+		if (this.height==  m.height)
+			return this.width-m.width;
+		return this.height-m.height;
+		
+		// fix double return 
+		//Double.compare(a, b);
+		//will return a negative number if a>b etc 
+		
+	}
+}
+public static void shuffle(int [] a) {
+	int n = a.length;
+	Random rand = new Random();
+	
+	for (int i = 0; i < n; i++) {
+		int tempIndex = rand.nextInt();
+		int temp = a[i];
+		a[tempIndex] = temp;
+	}
 }
 //merge sort O(n+m) >> O(nlog(n))
 public static void mergeSort1 (int [] a, int [] b){
