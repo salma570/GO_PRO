@@ -1,8 +1,8 @@
 public class sort{
 
- //O(n^2)
-  
 
+ 
+//O(n^2)
 public static void bubbleSort (int [] array){
 /* type 1 bubble sort algorithm > swap each 2 adjacent cells 
 
@@ -11,8 +11,7 @@ traverse once (n operations) : 5 4 3 2 1 6
 traverse 2nd time (n operations) : 4 3 2 1 5 6
 */   
     int n = array.length;
-    boolean flag = false;
-    
+    boolean flag = false;  
     for(int i =0; i<n ; i++){
       flag = true;
       
@@ -49,7 +48,6 @@ traverse 2nd time (n operations) : 1 2 4 3 5 6
    }
    
  }
-
 public static void InsertionSort (int [] array){
 /*  2 selection sort algorithm > sorts tracversed array : select  
 the current elememnnt an dswitches it to the suitablel place  
@@ -69,8 +67,4 @@ traverse 2nd time (n operations) : 4 5 6 3 2 1
   }
  }
 }
-  
-  //o(nlog(n))         max n: n^5/n^6
-  //o(n)                max n: n^7/n^6
-  }
 }
