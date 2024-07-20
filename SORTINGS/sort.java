@@ -24,7 +24,12 @@ traverse 2nd time (n operations) : 4 3 2 1 5 6
       if(flag) break;
     }
   }
-
+/* type 2 selection sort algorithm > gets the smallest and sorts accordingly 
+n + (n-1)+ (n-2)+..
+o(n^2)             max n: n^3/n^4
+traverse once (n operations) : 5 4 3 2 1 6
+traverse 2nd time (n operations) : 4 3 2 1 5 6
+*/ 
  public static void bubbleSort (int [] array){
    //o(nlog(n))         max n: n^5/n^6
  }
