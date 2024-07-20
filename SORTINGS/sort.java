@@ -1,12 +1,11 @@
+
 public class sort{
 //o(nlog(n))         max n: n^5/n^6
 //o(n)                max n: n^7/n^6
 public static void main (String[] args){
  
 }
-
- 
-//merge sort O(n+m)
+//merge sort O(n+m) >> O(nlog(n))
 public static void mergeSort1 (int [] a, int [] b){
 		int n = a.length, m = b.length;
 	int[] res = new int[n+m];
@@ -34,14 +33,14 @@ public static void mergeSort2 (int [] a, int start, int end){
 	if(start == end) return;
 	int mid = (start +end )/2;
 	mergeSort2(a, start , mid);
-	mergeSort2(a,start, mid+1,end);
+	mergeSort2(a, mid+1,end);
 	merge(a, start, mid, end)	;
 }
-	
-
-public static void merge(int [] a, int start, int mid, int end){
+static int steps;
+public static void merge(int [] array, int start, int mid, int end){
 	int u = start, ue = mid+1, v = mid+1, ve= end+1;
 	int n = end-start +1;
+	
 	int [] sort = new int[n];
 	for(int i=0;i<n;i++){
 		if(u == ue)
@@ -50,24 +49,17 @@ public static void merge(int [] a, int start, int mid, int end){
 			sort[i] = array[u++];
 		else if (array[u]<= array[v])
 			sort[i] = array[u++];
+		else {
+			sort[i] = array[v++];
+			steps+= ue=u;
+		}
+	}
+	for (int i = 0; i < n; i++) {
+		array[start +i] = sort[i];
+		
 	}
 	
-}	
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+}
  //O(n^2)
 public static void bubbleSort (int [] array){
 /* type 1 bubble sort algorithm > swap each 2 adjacent cells 
@@ -125,7 +117,7 @@ traverse 2nd time (n operations) : 4 5 6 3 2 1
  int n = array.length ;
  
  for(int i=0; i<n;i++){
-  int temp = array[i]; j=i;
+  int temp = array[i], j=i;
   while(j>0&& array[j-1]>array[j]){
       array[j] = array[j-1];
       array[j-1] = temp;
