@@ -27,8 +27,6 @@ traverse 2nd time (n operations) : 4 3 2 1 5 6
       if(flag) break;
     }
   }
-
-
 public static void selectionSort (int [] array){
    /*  2 selection sort algorithm > gets the smallest and sorts accordingly 
 n + (n-1)+ (n-2)+..
